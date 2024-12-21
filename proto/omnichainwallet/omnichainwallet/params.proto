@@ -1,0 +1,15 @@
+syntax = "proto3";
+package omnichainwallet.omnichainwallet;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+
+option go_package = "github.com/tskoyo/omnichain-wallet/x/omnichainwallet/types";
+
+// Params defines the parameters for the module.
+message Params {
+  option (amino.name) = "omnichainwallet/x/omnichainwallet/Params";
+  option (gogoproto.equal) = true;
+
+  
+}

@@ -1,0 +1,17 @@
+syntax = "proto3";
+package omnichainwallet.omnichainwallet;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+import "omnichainwallet/omnichainwallet/params.proto";
+
+option go_package = "github.com/tskoyo/omnichain-wallet/x/omnichainwallet/types";
+
+// GenesisState defines the omnichainwallet module's genesis state.
+message GenesisState {
+  // params defines all the parameters of the module.
+  Params params = 1 [
+    (gogoproto.nullable) = false,
+    (amino.dont_omitempty) = true
+  ];
+}
